@@ -7,6 +7,10 @@ const server = http.Server(app)
 
 const PORT = parseInt(process.env.PORT) || 3000
 
+app.get('/', (req, res) => {
+  res.send('hello friend')
+})
+
 // start the server
 server.listen(PORT, (err) => {
   if (err) {
