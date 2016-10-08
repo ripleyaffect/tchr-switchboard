@@ -4,6 +4,7 @@ const RTCSwitchboard = require('rtc-switchboard')
 
 const app = express()
 const server = http.Server(app)
+const switchboard = RTCSwitchboard(server)
 
 const PORT = parseInt(process.env.PORT) || 3000
 
@@ -17,5 +18,5 @@ server.listen(PORT, (err) => {
     return console.log('Encountered error starting server: ', err)
   }
 
-  console.log('Server running on port' + PORT)
+  console.log('Server running on port ' + PORT)
 });
